@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def multiply_by_2(a_dictionary):
     # It creates a copy of the original dictionary called 'new'
     # It iterates over the keys of the 'new' dictionary
