@@ -10,6 +10,11 @@ class Square:
     Initializes the square object with a size attribute
     """
     def __init__(self, size=0):
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+
+        if size < 0:
+            raise ValueError("size must be >= 0")
         self.__size = size
 
     """
@@ -49,5 +54,5 @@ class Square:
                 for j in range(self.__size):
                     print("#", end="")
                 print()
-            else:
-                print()
+        else:
+            print()
