@@ -1,5 +1,8 @@
 # 0x04. Python - Classes and Objects
 
+![OOP](https://user-images.githubusercontent.com/107968573/212806707-d5ee9d64-111d-4452-b3d0-71702598fea2.png)
+
+
 ## Tasks
 0. `Square with size`
 Write a class Square that defines a square by:
