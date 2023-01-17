@@ -1,4 +1,6 @@
-# README for repo Holberton Higher Level Programming
+# Holberton Higher Level Programming
+
+Each project will be listed below that is apart of this repo.
 
 ## Projects
 
