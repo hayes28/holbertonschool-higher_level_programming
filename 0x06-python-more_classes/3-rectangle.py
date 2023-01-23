@@ -87,4 +87,4 @@ class Rectangle:
         Returns a string representation of the rectangle that
         is machine readable
         """
-        return("Rectangle({}, {}".format(self.__width, self.__height))
+        return("Rectangle({}, {})".format(self.__width, self.__height))
