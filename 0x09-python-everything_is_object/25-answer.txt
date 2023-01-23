@@ -1,3 +1,1 @@
-False # 'is' compares the id of two objects
-# in this case two tuples are created with same elements
-# but not the same object in memory.
+False
