@@ -24,7 +24,7 @@ class Rectangle:
         Retrieves width of self.width
         """
         return self.__width
-    
+
     @property
     def height(self):
         """
