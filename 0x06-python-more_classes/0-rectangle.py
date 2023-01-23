@@ -8,7 +8,13 @@ width and height are private attributes
 
 
 class Rectangle:
+    """
+    Rectangle definitions
+    """
     def __init__(self, width=0, height=0):
+        """
+        Method to initialize a rectangle
+        """
         self.height = height
         self.width = width
 
