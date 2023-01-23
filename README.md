@@ -15,3 +15,9 @@ Each project will be listed below that is apart of this repo.
 0x03 `Python More Data Structures: Set, Dictionary`
 
 0x04 `Python Classes and Objects`
+
+0x05. `Python - Test-driven development`
+
+0x06. `Python - More Classes and Objects`
+
+0x07. `Python - Everything is object`
