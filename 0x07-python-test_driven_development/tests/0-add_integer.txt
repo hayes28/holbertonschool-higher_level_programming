@@ -1,0 +1,44 @@
+Try importing function from module:
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+Try positives:
+    >>> add_integer(1, 2)
+    3
+
+Try negatives:
+    >>> add_integer(-1, -2)
+    -3
+
+Try one negative:
+    >>> add_integer(1, -2)
+    -1
+
+Try floats:
+    >>> add_integer(1.0, 2.0)
+    3.0
+
+Try float with negative:
+    >>> add_integer(1.0, -2.0)
+    -1.0
+
+Try nothing passed
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() takes exactly 1 argument (0 given)
+
+Try strings:
+    >>> add_integer("1", "2")
+    '12'
+
+Testing when a is not an integer
+    >>> add_integer("hello", 98)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+Testing when b is not an integer
+    >>> add_integer(3, "hello")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
