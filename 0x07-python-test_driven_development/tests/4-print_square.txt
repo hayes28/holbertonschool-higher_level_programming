@@ -1,0 +1,20 @@
+Try importing function from module:
+    >>> print_square = __import__("4-print_square").print_square
+
+Try size not an int:
+    >>> print_square("foo")
+    Traceback (most recent call last):
+    TypeError: size must be an integer
+
+Try negative size:
+    >>> print_square(-5)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+Try two argument:
+    >>> print_square(5, 10)
+    Traceback (most recent call last):
+    TypeError: got multiple values for keyword argument'size'
+
+Try Size is integer equal to 0:
+    >>> print_square(0)
