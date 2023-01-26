@@ -1,0 +1,16 @@
+Try importing function from module:
+    >>> say_my_name = __import__("3-say-my-name").say_my_name
+
+Try not a string first:
+    >>> say_my_name(12, "Ham")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+Try not a string last:
+    >>> say_my_name("Ham", 12)
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+Try two empty strings:
+    >>> say_my_name("", "")
+    my name is 
