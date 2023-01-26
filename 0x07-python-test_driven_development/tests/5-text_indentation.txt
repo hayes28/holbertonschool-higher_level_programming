@@ -1,0 +1,24 @@
+Importing text_indentation function from doctest
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Try text is a string with no delimiters
+    >>> text_indentation("Hello world")
+    Hello world
+
+Try text is a string with no delimiters
+    >>> text_indentation("First. Second")
+    First
+    <BLANKLINE>
+    Second
+
+Try passing an integer
+    >>> text_indentation("First. Second", 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be string
+
+Try passing nothing
+    >>> text_indentation()
+    Traceback (most recent call last):
+        ...
+    TypeError: text_indentation() takes at least 2 arguments (1 given)
