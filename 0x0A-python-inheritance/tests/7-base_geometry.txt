@@ -1,0 +1,53 @@
+Import base_geometry module
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+bg = BaseGeometry()
+
+Testing for documentation
+    >>> len(__import__('7-base_geometry').__doc__) > 1
+    True
+    >>> len(__import__('7-base_geometry').BaseGeometry.__doc__) > 1
+    True
+    >>> len(__import__('7-base_geometry').BaseGeometry.area.__doc__) > 1
+    True
+    >>> len(__import__('7-base_geometry').BaseGeometry.integer_validator.__doc__) > 1
+    True
+    >>> print(bg.__doc__)
+    Empty class, expect for exception
+    <BLANKLINE>
+
+Testing for improper input
+    >>> bg.integer_validator("Morning", -4)
+    Traceback (most recent call last):
+        ...
+    ValueError: Morning must be greater than 0
+
+    >>> bg.integer_validator("length", 0)
+    Traceback (most recent call last):
+        ...
+    ValueError: length must be greater than 0
+
+    >>> bg.integer_validator("Float", 3.14)
+    Traceback (most recent call last):
+        ...
+    TypeError: Float must be an integer
+    
+    >>> bg.integer_validator("String", "abc")
+    Traceback (most recent call last):
+        ...
+    TypeError: String must be an integer
+
+    >>> bg.integer_validator("Empty")
+    Traceback (most recent call last):
+        ...
+    TypeError: integer_validator() missing 1 required positional arugments: 'value'
+
+Testing for valid input
+    >>> bg.integer_validator("Five", 5)
+
+    >>> bg.integer_validator("One", 1)
+
+
+
+
+
