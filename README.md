@@ -21,3 +21,9 @@ Each project will be listed below that is apart of this repo.
 0x06. `Python - More Classes and Objects`
 
 0x07. `Python - Everything is object`
+
+0x0A. `Python - inheritance`
+
+0x0B. `Python - Input Output`
+
+0x0C. `Python - Almost a circle`
