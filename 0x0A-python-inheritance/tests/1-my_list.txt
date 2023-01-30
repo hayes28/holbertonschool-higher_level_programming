@@ -1,0 +1,64 @@
+# test run with python3 -m doctest -v ./tests/1-my_list.txt
+
+=============================
+ How to use 1-my_list.py
+=============================
+
+>>> MyList = __import__('1-my_list').MyList
+
+Good User
+=========
+
+Can print lists sorted
+(ascending order)
+
+::
+
+    >>> MyList().print_sorted()
+
+::
+
+    >>> MyList([-3, 2, 4]).print_sorted()
+    [2, 4, -3]
+
+::
+
+    >>> MyList(["Bond", "Jenny", "Joy"]).print_sorted()
+    ['Bond', 'Jenny', 'Joy']
+
+::
+
+    >>> MyList([]).print_sorted()
+    []
+
+:: Base class list methods are inherited:
+
+    >>> the_list = MyList()
+    >>> the_list.append('I')
+    >>> the_list.append('H')
+    >>> print(the_list)
+    ['I', 'H']
+    >>> the_list.print_sorted()
+    ['H', 'I']
+    >>> print(the_list)
+    ['I', 'H']
+
+:: Class instances have MyList type:
+
+    >> the_list = MyList()
+    >>> type(the_list)
+    <class '1-my_list.MyList'>
+    >>> print(the_list.print_sorted)
+    <bound method MyList.print_sorted of []>
+
+:: Using with dicts:
+
+    >> MyList({"a": 5, "b": 2}).print_sorted()
+    ['a', 'b']
+
+:: Using with sets:
+    >>> MyList = {1, 2, 3}
+    >>> MyList.print_sorted()
+    ... 1, 2, 3
+    >>> (1, 2, 3)
+
