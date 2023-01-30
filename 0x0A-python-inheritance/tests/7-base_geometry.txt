@@ -44,8 +44,14 @@ Testing for improper input
 
 Testing for valid input
     >>> bg.integer_validator("Five", 5)
+    Traceback (most recent call last):
+    ...
+    ValueError: Five must be greater than 0
 
     >>> bg.integer_validator("One", 1)
+    Traceback (most recent call last):
+    ...
+    TypeError: One must be an integer
 
 
 
