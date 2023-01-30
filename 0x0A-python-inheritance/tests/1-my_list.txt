@@ -6,8 +6,8 @@
 
 >>> MyList = __import__('1-my_list').MyList
 
-Good User
-=========
+Correct examples
+================
 
 Can print lists sorted
 (ascending order)
@@ -62,3 +62,11 @@ Can print lists sorted
     ... 1, 2, 3
     >>> (1, 2, 3)
 
+Incorrect examples
+==================
+
+    >>> the_list = MyList()
+    >>> the_list = ["hi", 1, 8, 5]
+    Traceback (most recent call last):
+    ...
+    TypeError: 'type' object is not iterable
