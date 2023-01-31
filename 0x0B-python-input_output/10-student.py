@@ -2,8 +2,6 @@
 """ Write a class Student that defines
 a student by: (based on 9-student.py) """
 
-import contextlib
-
 
 class Student:
     """ Student class """
