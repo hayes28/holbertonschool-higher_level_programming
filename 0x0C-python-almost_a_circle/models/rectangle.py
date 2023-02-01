@@ -29,6 +29,12 @@ class Rectangle(Base):
             + ') ' + str(self.__x) + '/' + str(self.__y) + ' - ' \
             + str(self.width) + '/' + str(self.height)
 
+    def update(self, *args):
+        """assigns an argument to each attribute"""
+        key = ["id", "width", "height", "x", "y"]
+        for i in range(len(args)):
+            setattr(self, key[i], args[i])
+
     @property
     def width(self):
         """Getter for __width"""
