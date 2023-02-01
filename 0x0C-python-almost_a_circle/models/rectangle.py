@@ -29,7 +29,6 @@ class Rectangle(Base):
             + ') ' + str(self.__x) + '/' + str(self.__y) + ' - ' \
             + str(self.width) + '/' + str(self.height)
 
-
     @property
     def width(self):
         """Getter for __width"""
