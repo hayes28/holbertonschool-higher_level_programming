@@ -28,6 +28,7 @@ class Base:
             if type(dic) != dict:
                 raise TypeError("all_dictionaries must be dictionaries")
         return json.dumps(list_dictionaries)
+
     @staticmethod
     def from_json_string(json_string):
         """Returns the list of the JSON string representation
