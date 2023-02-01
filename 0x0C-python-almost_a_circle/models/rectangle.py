@@ -37,6 +37,17 @@ class Rectangle(Base):
         for key, value in kwargs.items():
             setattr(self, key, value)
 
+    def to_dictionary(self):
+        """Returns dictionary representation of Rectangle"""
+        self_dict = {
+            'x' : self.x,
+            'y' : self.y,
+            'id' : self.id,
+            'height' : self.height,
+            'width' : self.width
+        }
+        return self_dict
+
     @property
     def width(self):
         """Getter for __width"""
