@@ -2,22 +2,24 @@
 """
 Script that lists all states from the database hbtn_0e_0_usa
 """
-
 import MySQLdb
-from sys import argv
 
 
 def print_states():
+    """
+    Prints states from the database hbtn_0e_0_usa
+    """
+    from sys import argv
     db = MySQLdb.connect(host="localhost", port=3306, user=argv[1],
                          passwd=argv[2], database=argv[3])
     
-    cursor = db.cursor()
+    cur = db.cursor()
 
-    cursor.execute("SELECT * FROM states")
-    for row in cursor.fetchall():
+    cur.execute("SELECT * FROM states")
+    for row in cur.fetchall():
         print(row)
 
-    cursor.close()
+    cur.close()
     db.close()
 
 if __name__ == "__main__":
