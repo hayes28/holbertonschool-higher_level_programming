@@ -7,7 +7,6 @@ import MySQLdb
 import sys
 
 
-
 def print_stateN():
     """
     Print states from database
