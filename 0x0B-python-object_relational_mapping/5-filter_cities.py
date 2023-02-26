@@ -24,7 +24,9 @@ def filter_cities():
                 WHERE state_id = (SELECT id FROM states WHERE name = %(name)s)\
                 ORDER BY cities.id ASC", {'name': state})
 
-    if rows := cur.fetchall():
+    rows = cur.fetchall()
+
+    if rows:
         print(", ".join([record[0] for record in rows]))
 
     cur.close()
