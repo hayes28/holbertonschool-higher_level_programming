@@ -21,12 +21,11 @@ def filter_cities():
     state = sys.argv[4]
 
     cur.execute("SELECT name FROM cities\
-                WHERE state_id = (SELECT id FROM states WHERE name = %(name)s)\
-                ORDER BY cities.id ASC", {'name': state})
+                    WHERE state_id =\
+                        (SELECT id FROM states WHERE name = %(name)s)\
+                            ORDER BY cities.id ASC", {'name': state})
 
-    rows = cur.fetchall()
-
-    if rows:
+    if rows := cur.fetchall():
         print(", ".join([record[0] for record in rows]))
 
     cur.close()
