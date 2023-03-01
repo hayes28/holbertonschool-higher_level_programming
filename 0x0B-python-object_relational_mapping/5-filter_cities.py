@@ -21,8 +21,7 @@ if __name__ == "__main__":
                         (SELECT id FROM states WHERE name = %(name)s)\
                             ORDER BY cities.id ASC", {'name': state})
 
-    for rows in cur.fetchall():
-        print(", ".join([record[0] for record in rows]))
+    print(", ".join(record[0] for record in cur.fetchall()))
 
     cur.close()
     db.close()
