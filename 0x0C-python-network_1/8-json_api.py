@@ -18,7 +18,7 @@ if __name__ == "__main__":
     req = requests.post(url, data={"q": q})
     try:
         a_dict = req.json()
-        a_id = a_dict.get('id')
+        id = a_dict.get('id')
         name = a_dict.get('name')
         if len(a_dict) == 0:
             print('No result')
