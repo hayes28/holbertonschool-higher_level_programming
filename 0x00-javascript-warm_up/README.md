@@ -23,7 +23,7 @@ JavaScript is a versatile programming language used for a variety of purposes, i
 + Import a file
 
 ## Tasks
-- [Task 0](./0x00-javascript-warm_up/0-javascript_is_amazing.js)
+- [Task 0](https://github.com/hayes28/holbertonschool-higher_level_programming/blob/master/0x00-javascript-warm_up/0-javascript_is_amazing.js)
 - [Task 1](./0x00-javascript-warm_up/1-multi_languages.js)
 - [Task 2](./0x00-javascript-warm_up/2-arguments.js)
 - [Task 3](./0x00-javascript-warm_up/3-value_argument.js)
