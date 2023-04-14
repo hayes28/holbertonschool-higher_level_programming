@@ -14,6 +14,5 @@ request(url, function (err, response, body) {
   if (err) throw err;
   fs.writeFile(process.argv[3], body, 'utf-8', function (err) {
     if (err) throw err;
-    console.log(`File saved to ${process.argv[3]}`); // backticks
   });
 });
