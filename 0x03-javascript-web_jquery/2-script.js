@@ -2,6 +2,6 @@
 // You can’t use document.querySelector to select the HTML tag
 // You must use the jQuery API
 
-$('DIV#red_header').click(function () {
-    $('header').css('color', '#FF0000');
-    });
+$('#red_header').click(function () {
+  $('header').css('color', '#FF0000');
+});
