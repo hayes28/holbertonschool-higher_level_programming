@@ -15,5 +15,5 @@ def say_my_name(first_name, last_name=""):
         raise TypeError("first_name must be a string")
     if type(last_name) not in [str]:
         raise TypeError("last_name must be a string")
-    fullname = first_name + " " + last_name
-    print("My name is " + fullname)
+    fullname = f"{first_name} {last_name}"
+    print(f"My name is {fullname}")

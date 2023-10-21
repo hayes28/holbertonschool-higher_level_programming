@@ -24,4 +24,4 @@ class Square(Rectangle):
         """Returns the human readable
         string representation of self, says [Rectanlge] """
 
-        return("[Rectangle] {}/{}".format(self.__size, self.__size))
+        return f"[Rectangle] {self.__size}/{self.__size}"

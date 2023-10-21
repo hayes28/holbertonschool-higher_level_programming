@@ -5,8 +5,8 @@ if len(argv) == 1:
     print("0 arguments.")
 elif len(argv) == 2:
     print("1 argument:")
-    print("1: {}".format(argv[1]))
+    print(f"1: {argv[1]}")
 else:
-    print("{} arguments:".format(len(argv) - 1))
+    print(f"{len(argv) - 1} arguments:")
     for x in range(1, len(argv)):
-        print("{}: {}".format(x, argv[x]))
+        print(f"{x}: {argv[x]}")

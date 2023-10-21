@@ -20,14 +20,12 @@ class Rectangle(Base):
     def display(self):
         """Rectangle display method using `#` """
         print("\n" * (self.__y), end="")
-        for i in range(self.__height):
+        for _ in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """Return string representation of a Rectangle"""
-        return '[' + type(self).__name__ + '] (' + str(self.id) \
-            + ') ' + str(self.__x) + '/' + str(self.__y) + ' - ' \
-            + str(self.width) + '/' + str(self.height)
+        return f'[{type(self).__name__}] ({str(self.id)}) {str(self.__x)}/{str(self.__y)} - {str(self.width)}/{str(self.height)}'
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
@@ -39,14 +37,13 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """Returns dictionary representation of Rectangle"""
-        self_dict = {
+        return {
             'x': self.x,
             'y': self.y,
             'id': self.id,
             'height': self.height,
-            'width': self.width
+            'width': self.width,
         }
-        return self_dict
 
     @property
     def width(self):

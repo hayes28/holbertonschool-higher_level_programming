@@ -51,25 +51,21 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON string representation
         of list_objs to a file"""
-        filename = cls.__name__ + ".json"
+        filename = f"{cls.__name__}.json"
         dicList = []
         if list_objs is not None:
-            for obj in list_objs:
-                dicList.append(obj.to_dictionary())
-
+            dicList.extend(obj.to_dictionary() for obj in list_objs)
         with open(filename, mode='w', encoding='utf-8') as f:
             f.write(cls.to_json_string(dicList))
 
     @classmethod
     def load_from_file(cls):
         """returns a list of instances from a .json file"""
-        filename = cls.__name__ + ".json"
+        filename = f"{cls.__name__}.json"
         try:
             with open(filename, mode='r', encoding='utf-8') as f:
                 json_string = f.read()
-                dicList = []
-                for obj in cls.from_json_string(json_string):
-                    dicList.append(cls.create(**obj))
+                dicList = [cls.create(**obj) for obj in cls.from_json_string(json_string)]
         except:
             dicList = []
         return dicList
