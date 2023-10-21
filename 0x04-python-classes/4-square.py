@@ -50,8 +50,8 @@ class Square:
         Prints a square using '#' character
         """
         if self.size > 0:
-            for i in range(self.__size):
-                for j in range(self.__size):
+            for _ in range(self.__size):
+                for _ in range(self.__size):
                     print("#", end="")
                 print()
         else:

@@ -2,6 +2,7 @@
 """ adds all arguments to a Python list,
 and then save them to a file: """
 
+
 import sys
 
 save_json = __import__("5-save_to_json_file").save_to_json_file
@@ -15,7 +16,5 @@ try:
 except(TypeError, FileNotFoundError):
     json_list = []
 
-for i in sys.argv[1:]:
-    json_list.append(i)
-
+json_list.extend(iter(sys.argv[1:]))
 save_json(json_list, filename)

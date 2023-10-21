@@ -11,9 +11,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """Return string representation of Rectangle"""
-        return '[' + type(self).__name__ + '] (' + str(self.id) \
-            + ') ' + str(self.x) + '/' + str(self.y) + ' - ' \
-            + str(self.size)
+        return f'[{type(self).__name__}] ({str(self.id)}) {str(self.x)}/{str(self.y)} - {str(self.size)}'
 
     def update(self, *args, **kwargs):
         """Assigning an argument to each attribute"""
@@ -25,13 +23,7 @@ class Square(Rectangle):
 
     def to_dictionary(self):
         """Returns dictionary representation of Rectangle"""
-        self_dict = {
-            'id': self.id,
-            'x': self.x,
-            'size': self.size,
-            'y': self.y
-        }
-        return self_dict
+        return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
 
     @property
     def size(self):
